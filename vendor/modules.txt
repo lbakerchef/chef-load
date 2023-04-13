@@ -26,7 +26,7 @@ github.com/icrowley/fake
 github.com/inconshreveable/mousetrap
 # github.com/konsorten/go-windows-terminal-sequences v1.0.3
 github.com/konsorten/go-windows-terminal-sequences
-# github.com/lbakerchef/chef v0.0.0-20230413144622-bd00de1535bc
+# github.com/lbakerchef/chef v0.0.0-20230413153039-0961666e0482
 ## explicit
 github.com/lbakerchef/chef
 # github.com/magiconair/properties v1.8.1
