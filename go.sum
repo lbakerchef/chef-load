@@ -132,8 +132,8 @@ github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORN
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
 github.com/kr/text v0.1.0 h1:45sCR5RtlFHMR4UwH9sdQ5TC8v0qDQCHnXt+kaKSTVE=
 github.com/kr/text v0.1.0/go.mod h1:4Jbv+DJW3UT/LiOwJeYQe1efqtUx/iVham/4vfdArNI=
-github.com/lbakerchef/chef v0.0.0-20230413153039-0961666e0482 h1:OHscEr1J8T50Pt3BqHksgg9LFs8/FHw6P8CWx8DWMEo=
-github.com/lbakerchef/chef v0.0.0-20230413153039-0961666e0482/go.mod h1:1jcQYrw+Ye8pBTpjIr+ZT4DcKu7I/8+zu1Ml0KZlfgM=
+github.com/lbakerchef/chef v0.0.0-20230413162419-80ca1e147e76 h1:vJutswVadepEP2SqH7cTYQnhZPGqfo1YJAlW+N0XTQA=
+github.com/lbakerchef/chef v0.0.0-20230413162419-80ca1e147e76/go.mod h1:1jcQYrw+Ye8pBTpjIr+ZT4DcKu7I/8+zu1Ml0KZlfgM=
 github.com/magiconair/properties v1.8.0/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=
 github.com/magiconair/properties v1.8.1 h1:ZC2Vc7/ZFkGmsVC9KvOjumD+G5lXy2RtTKyzRKO2BQ4=
 github.com/magiconair/properties v1.8.1/go.mod h1:PppfXfuXeibc/6YijjN8zIbojt8czPbwD3XqdrwzmxQ=

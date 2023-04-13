@@ -357,7 +357,7 @@ func (c *Client) magicRequestDecoder(method, path string, body io.Reader, v inte
 // NewRequest returns a signed request  suitable for the chef server
 func (c *Client) NewRequest(method string, requestUrl string, body io.Reader) (*http.Request, error) {
 logrus.Info("ENTERED go-chef/http.go NewRequest")
-logrus.WithFields(logrus.Fields{"method": method, "requestURL": requestURL, "body": body}).Info("NewRequest ARGS")
+logrus.WithFields(logrus.Fields{"method": method, "requestUrl": requestUrl, "body": body}).Info("NewRequest ARGS")
 logrus.Info("CALLING url.Parse")
 	relativeUrl, err := url.Parse(requestUrl)
 logrus.Info("RETURN FROM url.Parse")

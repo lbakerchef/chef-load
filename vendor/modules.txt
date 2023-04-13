@@ -24,7 +24,7 @@ github.com/hashicorp/hcl/json/token
 github.com/icrowley/fake
 # github.com/inconshreveable/mousetrap v1.0.0
 github.com/inconshreveable/mousetrap
-# github.com/lbakerchef/chef v0.0.0-20230413153039-0961666e0482
+# github.com/lbakerchef/chef v0.0.0-20230413162419-80ca1e147e76
 ## explicit
 github.com/lbakerchef/chef
 # github.com/magiconair/properties v1.8.1
