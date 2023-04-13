@@ -23,7 +23,7 @@ import (
 	"os"
 	"strings"
 
-	chef_load "github.com/chef/chef-load/lib"
+	chef_load "github.com/lbakerchef/chef-load/lib"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -34,7 +34,7 @@ var rootCmd = &cobra.Command{
 	Use:   "chef-load",
 	Short: "A tool for simulating loading chef data",
 	Long: `A tool for simulating load on a Chef Server and/or a Chef Automate Server.
-Complete documentation is available at https://github.com/chef/chef-load`,
+Complete documentation is available at https://github.com/lbakerchef/chef-load`,
 	TraverseChildren: true,
 	Run:              func(cmd *cobra.Command, args []string) {},
 }

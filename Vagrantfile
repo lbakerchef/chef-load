@@ -171,7 +171,7 @@ SCRIPT
 $github_clone_chef_load = <<SCRIPT
 ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 cd #{home_dir}
-git clone git@github.com:chef/chef-load.git
+git clone git@github.com:lbakerchef/chef-load.git
 cd chef-load
 echo "export GITHUB_TOKEN=\"#{ENV['GITHUB_TOKEN']}\"" > .secrets
 git checkout #{latest_head_commit}
@@ -202,7 +202,7 @@ EOT
 EOF
 STUDIORC="#{home_dir}/chef-load/.studiorc"
 echo 'printf "\033[0;31m>>> ONE MORE STEP NEEDED TO RUN chef-load <<<\033[0m\n"' >> $STUDIORC
-echo 'printf "1. Run this here:\033[1;32m hab pkg install --binlink chef/chef-load \033[0m\n"' >> $STUDIORC
+echo 'printf "1. Run this here:\033[1;32m hab pkg install --binlink lbakerchef/chef-load \033[0m\n"' >> $STUDIORC
 SCRIPT
 
 if ENV['AWS_SSH_KEY_PATH'].nil?

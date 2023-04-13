@@ -20,7 +20,7 @@ package chef_load
 import (
 	"regexp"
 
-	"github.com/go-chef/chef"
+	"github.com/lbakerchef/chef"
 )
 
 type runListItem struct {

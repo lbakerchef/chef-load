@@ -20,7 +20,7 @@ package chef_load
 import (
 	"math/rand"
 
-	"github.com/go-chef/chef"
+	"github.com/lbakerchef/chef"
 )
 
 type cookbookFile struct {

@@ -22,7 +22,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-chef/chef"
+	"github.com/lbakerchef/chef"
 	"github.com/google/uuid"
 )
 

@@ -20,7 +20,7 @@ package chef_load
 import (
 	"encoding/json"
 
-	"github.com/go-chef/chef"
+	"github.com/lbakerchef/chef"
 )
 
 type role struct {

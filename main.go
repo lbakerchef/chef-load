@@ -18,7 +18,7 @@
 package main
 
 import (
-	"github.com/chef/chef-load/commands"
+	"github.com/lbakerchef/chef-load/commands"
 )
 
 func main() {

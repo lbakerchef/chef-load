@@ -29,7 +29,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/go-chef/chef"
+	"github.com/lbakerchef/chef"
 	"github.com/google/uuid"
 	log "github.com/sirupsen/logrus"
 )
