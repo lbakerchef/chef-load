@@ -361,18 +361,18 @@ logrus.WithFields(logrus.Fields{"method": method, "requestUrl": requestUrl, "bod
 logrus.Info("CALLING url.Parse")
 	relativeUrl, err := url.Parse(requestUrl)
 logrus.Info("RETURN FROM url.Parse")
-logrus.WithFields(logrus.Fields{"relativeUrl": relativeUrl, "err": err}).Info("VALUES")
+logrus.WithFields(logrus.Fields{"relativeUrl": relativeUrl, "err": err, "c": c, "c.BaseURL": c.BaseURL}).Info("VALUES")
 	if err != nil {
 		return nil, err
 	}
-	u := c.BaseURL.ResolveReference(relativeUrl)
+	u := c.BaseURL.ResolveReference(relativeUrl) // <--------------------- ERROR HERE
 
 	// NewRequest uses a new value object of body
 	req, err := http.NewRequest(method, u.String(), body)
 	if err != nil {
 		return nil, err
 	}
-
+// WE NEVER ARRIVE HERE ---------------------------------------------------------------
 logrus.Info("CHECK 1")
 	// parse and encode Querystring Values
 	values := req.URL.Query()
