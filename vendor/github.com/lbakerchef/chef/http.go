@@ -220,8 +220,9 @@ logrus.WithFields(logrus.Fields{"cfg": cfg, "cfg.BaseURL": cfg.BaseURL}).Info("A
 	}
 
 logrus.WithFields(logrus.Fields{"cfg.BaseURL": cfg.BaseURL}).Info("calling url.Parse with")
-	baseUrl, _ := url.Parse(cfg.BaseURL)
-logrus.WithFields(logrus.Fields{"baseUrl": baseUrl}).Info("baseUrl assigned")
+	baseUrl, err0 := url.Parse(cfg.BaseURL) // <===  ERROR - baseUrl == nil here
+    logrus.WithFields(logrus.Fields{"baseUrl": baseUrl, "err0": err0}).Info("baseUrl assigned, err0 assigned")
+    // the issue is parsing ipv6
 
 	tlsConfig := &tls.Config{InsecureSkipVerify: cfg.SkipSSL}
 	if cfg.RootCAs != nil {
@@ -369,7 +370,7 @@ logrus.WithFields(logrus.Fields{"relativeUrl": relativeUrl, "err": err, "c": c, 
 	if err != nil {
 		return nil, err
 	}
-	u := c.BaseURL.ResolveReference(relativeUrl) // <--------------------- ERROR HERE
+	u := c.BaseURL.ResolveReference(relativeUrl) // <--------------------- ERROR HERE - c.BaseURL == nil
 
 	// NewRequest uses a new value object of body
 	req, err := http.NewRequest(method, u.String(), body)
