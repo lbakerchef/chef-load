@@ -108,8 +108,10 @@ func GenerateCCRs(config *Config, requests chan *request) (err error) {
 		ccrsTotal = ccrsPerDay * int64(config.DaysBack)
 	}
 
+
 	if config.RunChefClient {
 		chefClient = getAPIClient(config.ClientName, config.ClientKey, config.ChefServerURL)
+        log.WithFields(log.Fields{"chefClient": chefClient, "config.ClientName": config.ClientName, "config.ClientKey": config.ClientKey, "config.ChefServerURL": config.ChefServerURL}).Info("generator.go GenerateCCRs CREATED CHEF CLIENT")
 	}
 
 	log.WithFields(log.Fields{
@@ -206,7 +208,7 @@ func GenerateCCRs(config *Config, requests chan *request) (err error) {
 func ccr(config *Config, chefClient chef.Client, nodeName string, requests chan *request) <-chan int {
 	out := make(chan int)
 	go func() {
-		code, _ := randomChefClientRun(config, chefClient, nodeName, requests)
+		code, _ := randomChefClientRun(config, chefClient, nodeName, requests) // <==== error with chefClient HERE 
 		out <- code
 		close(out)
 	}()

@@ -207,6 +207,8 @@ func (r *ErrorResponse) StatusURL() *url.URL {
 // It is a simple constructor for the Client struct intended as a easy interface for issuing
 // signed requests
 func NewClient(cfg *Config) (*Client, error) {
+logrus.Info("ENTERED chef/http.go NewClient")
+logrus.WithFields(logrus.Fields{"cfg": cfg, "cfg.BaseURL": cfg.BaseURL}).Info("ARGS")
 
 	// Verify Config settings
 	// Authentication version = 1.0 or 1.3, default to 1.0
@@ -217,7 +219,9 @@ func NewClient(cfg *Config) (*Client, error) {
 		return nil, err
 	}
 
+logrus.WithFields(logrus.Fields{"cfg.BaseURL": cfg.BaseURL}).Info("calling url.Parse with")
 	baseUrl, _ := url.Parse(cfg.BaseURL)
+logrus.WithFields(logrus.Fields{"baseUrl": baseUrl}).Info("baseUrl assigned")
 
 	tlsConfig := &tls.Config{InsecureSkipVerify: cfg.SkipSSL}
 	if cfg.RootCAs != nil {

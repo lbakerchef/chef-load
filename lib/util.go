@@ -89,6 +89,7 @@ log.Info("--------------------------- SHOULD NOT ARRIVE HERE -------------------
 func getAPIClient(clientName, privateKeyPath, chefServerURL string) chef.Client {
 	privateKey := getPrivateKey(privateKeyPath)
 
+    log.WithFields(log.Fields{"clientName": clientName, "privateKey": privateKey, "chefServerURL": chefServerURL }).Info("lib/util getAPIClient CALLING chef.NewClient WITH")
 	client, err := chef.NewClient(&chef.Config{
 		Name:    clientName,
 		Key:     privateKey,
@@ -98,6 +99,7 @@ func getAPIClient(clientName, privateKeyPath, chefServerURL string) chef.Client 
 	if err != nil {
 		log.WithField("error", err).Error("Could not create API client")
 	}
+log.WithField("client", client).Error("lib/util getAPIClient returning client value")
 	return *client
 }
 
